@@ -29,8 +29,6 @@ void func(int sockfd)
 
     bzero(buff, sizeof(buff));
 
-    bzero(buff, sizeof(buff));
-
     buff[0] = 'P';
     buff[1] = 'O';
     buff[2] = 'P';

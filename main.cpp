@@ -42,8 +42,8 @@ int main()
     if (server_pid == 0)
     {
         // child process
-        char *args[] = {(char *)(param.c_str()), NULL};
-        execv(args[0], args);
+        char *args_server[] = {(char *)(param.c_str()), NULL};
+        execv(args_server[0], args_server);
     }
     else
     {
@@ -54,14 +54,14 @@ int main()
     if (client_1 == 0)
     {
         // child process
-        char *args[] = {(char *)(client1_param.c_str()), NULL};
-        execv(args[0], args);
+        char *args_client1[] = {(char *)(client1_param.c_str()), NULL};
+        execv(args_client1[0], args_client1);
     }
     if (client_2 == 0)
     {
         // child process
-        char *args[] = {(char *)(client2_param.c_str()), NULL};
-        execv(args[0], args);
+        char *args_client2[] = {(char *)(client2_param.c_str()), NULL};
+        execv(args_client2[0], args_client2);
     }
 
     wait(NULL);
